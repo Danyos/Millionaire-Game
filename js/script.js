@@ -26,12 +26,12 @@ const gameActions = {
 let audienceChance = 95;
 let possibleAnswers = ['a', 'b', 'c', 'd'];
 let gameSounds = {
-    wrong: '../sound/audio/wrong_button.mp3',
-    won: '../sound/audio/won_million.mp3',
-    success: '../sound/audio/lets_play.mp3',
-    bg: '../sound/audio/music_01.mp3',
-    bg_1: '../sound/audio/music_02.mp3',
-    bg_2: '../sound/audio/music_03.mp3',
+    wrong: './sound/audio/wrong_button.mp3',
+    won: './sound/audio/won_million.mp3',
+    success: './sound/audio/lets_play.mp3',
+    bg: './sound/audio/music_01.mp3',
+    bg_1: './sound/audio/music_02.mp3',
+    bg_2: './sound/audio/music_03.mp3',
 };
 
 backgroundMusicControl.onclick = toggleBackgroundMusic;
