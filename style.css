@@ -1,0 +1,289 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+    background-image: url("./images/background_image01.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    font-family: Arial, sans-serif;
+    position: relative;
+}
+
+.liner {
+
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0, 51, 102, 0.75), rgba(0, 0, 68, 0.76));
+
+}
+
+.game-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.prize-list {
+    background-color: #003366;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.prize-item {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ffffff50;
+    padding: 15px 10px;
+    align-items: center;
+}
+
+.prize-item:last-child {
+    border-bottom: none;
+}
+
+.question-box {
+    background-color: #004488;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+
+}
+
+.question-option {
+    background-color: #004488;
+    border: 2px solid #0077cc;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.question-option:hover {
+    background-color: #0055aa;
+    color: #ffffcc;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header img {
+    max-width: 150px;
+}
+
+.lifeline-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.lifeline-buttons button {
+    background-color: #004488;
+    color: white;
+    border: 2px solid #0077cc;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.lifeline-buttons button:hover {
+    background-color: #0055aa;
+    transform: scale(1.1);
+}
+
+.progressing {
+    background: chocolate !important;
+}
+
+.completed {
+    background: green !important;
+
+}
+
+.danger {
+    background: red !important;
+}
+
+.game_over {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.24);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 99;
+}
+
+.game_over_modal {
+    max-width: 500px;
+    width: 100%;
+    height: 30vh;
+    background: #001844;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    button {
+        padding: 10px 20px;
+        font-size: 20px;
+        background-color: transparent;
+        border: 1px solid white;
+        color: white;
+        transition: 1s;
+
+        &:hover {
+            border: 1px solid red;
+        }
+    }
+
+    .price_won {
+        font-size: 30px;
+    }
+
+}
+
+.hidden-overflow {
+    overflow: hidden;
+}
+
+.used {
+    position: relative;
+}
+
+.used:before {
+    content: "x";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -30px;
+    left: 0;
+    font-size: 65px;
+    color: rgba(255, 0, 0, 0.56);
+
+}
+
+.callModal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.82);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 99999;
+}
+
+.callModalAnswer {
+    max-width: 300px;
+    width: 100%;
+    height: 20vh;
+    background: #003366;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px 0;
+
+    button {
+        background-color: #003366;
+        padding: 10px;
+        margin: 10px 0;
+        color: white;
+        border: 1px solid white;
+    }
+}
+
+/* Graph container */
+.hallModal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.72);
+    display: flex;
+    align-items: start;
+    justify-content: end;
+    z-index: 99999;
+    padding: 25px 0;
+}
+
+.graph-container {
+    max-width: 400px;
+    width: 100%;
+    height: 20vh;
+    text-align: center;
+    position: relative;
+}
+
+/* Icon at the top */
+.icon img {
+    width: 50px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* Graph section */
+.graph {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    width: 200px;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.1);
+    margin: 0 auto 10px;
+    position: relative;
+}
+
+/* Individual bars */
+.bar {
+    width: 30px;
+    background: #ff00ff;
+    text-align: center;
+    position: relative;
+}
+
+/* Percentages above bars */
+.bar::before {
+    content: attr(data-percent);
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px;
+}
+
+/* Labels below the graph */
+.labels {
+    display: flex;
+    justify-content: space-around;
+    width: 200px;
+    margin: 0 auto;
+}
+
+.labels span {
+    font-size: 16px;
+}
