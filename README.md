@@ -5,7 +5,7 @@ Welcome to the **Millionaire Game**, an interactive and exciting trivia game tha
 
 <div align="center">
   <h2 align="center">Millionaire Game</h2>
-  <a href="#"><strong>➥ Live Demo</strong></a>
+  <a href="https://danyos.github.io/Millionaire-Game/"><strong>➥ Live Demo</strong></a>
 </div>
 
 <br />
